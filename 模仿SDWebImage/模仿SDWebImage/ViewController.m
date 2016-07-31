@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 #import "AFNetworking.h"
+#import "appTableViewCell.h"
+#import "appModel.h"
+#import "FakerDownLoadManager.h"
 
 @interface ViewController ()
 
@@ -52,7 +55,7 @@
  */
 - (void)loadData {
     
-    NSString *urlString = @"https://raw.githubusercontent.com/yinqiaoyin/SimpleDemo/master/apps.json";
+    NSString *urlString = @"https://raw.githubusercontent.com/yinqiaoyin/SimpleDemo/master/apps1.json";
     
     // 初始化一个网络请求的管理器
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -73,14 +76,13 @@
         
         for (NSDictionary *dict in array) {
             // 2. 初始化模型
-            
+            appModel * info =[[appModel alloc]init];
             // 3. 使用 kvc 的方式赋值
-            
-            
+            [info setValuesForKeysWithDictionary:dict];
             // 4. 将模型添加到可变数组
-            [self.appInfos addObject:];
+            [self.appInfos addObject:info];
         }
-        NSLog(@"%@",self.appInfos);
+//        NSLog(@"%@",self.appInfos);
         // 刷新tableView
         [self.tableView reloadData];
         
@@ -104,12 +106,19 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
-    // [cell.iconView sd_setImageWithURL:[NSURL URLWithString:info.icon]];
+    appTableViewCell * cell =[tableView dequeueReusableCellWithIdentifier:@"cellid" forIndexPath:indexPath];
+    //获取模型变量
+    appModel * info = self.appInfos[indexPath.row];
+    //设置数据
+    cell.nameLabel.text = info.name;
+    cell.downLoadLabel.text = info.download;
     
-    // 测试断言
-    // [[HMDownloadManager sharedManager] downloadImageWithUrlString:info.icon compeletion:nil];
+    [[FakerDownLoadManager sharedManager] downLoadImageWithUrlString:info.icon compeletion:^(UIImage *image) {
+        cell.iconView.image = image;
+    }];
+    
   
-    return nil;
+    return cell;
 }
 
 

@@ -33,6 +33,7 @@
     // Cache文件目录拼接图片的名字 == 图片保存到沙盒的路径
     NSString *filePath = [cachePath stringByAppendingPathComponent:fileName];
     
+    
     return filePath;
 }
 

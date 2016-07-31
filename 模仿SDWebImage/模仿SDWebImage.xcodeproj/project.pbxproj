@@ -21,6 +21,9 @@
 		8115EF181D4DE65D007E1B7B /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115EF111D4DE65D007E1B7B /* AFURLResponseSerialization.m */; };
 		8115EF191D4DE65D007E1B7B /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115EF131D4DE65D007E1B7B /* AFURLSessionManager.m */; };
 		8115EF1C1D4DE6CE007E1B7B /* appModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115EF1B1D4DE6CE007E1B7B /* appModel.m */; };
+		8115EF1F1D4DE768007E1B7B /* appTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115EF1E1D4DE768007E1B7B /* appTableViewCell.m */; };
+		8115EF231D4DEB2D007E1B7B /* FakerDownLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115EF221D4DEB2D007E1B7B /* FakerDownLoadOperation.m */; };
+		8115EF261D4DEB4A007E1B7B /* FakerDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115EF251D4DEB4A007E1B7B /* FakerDownLoadManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,12 @@
 		8115EF131D4DE65D007E1B7B /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		8115EF1A1D4DE6CE007E1B7B /* appModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appModel.h; sourceTree = "<group>"; };
 		8115EF1B1D4DE6CE007E1B7B /* appModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = appModel.m; sourceTree = "<group>"; };
+		8115EF1D1D4DE768007E1B7B /* appTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appTableViewCell.h; sourceTree = "<group>"; };
+		8115EF1E1D4DE768007E1B7B /* appTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = appTableViewCell.m; sourceTree = "<group>"; };
+		8115EF211D4DEB2D007E1B7B /* FakerDownLoadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakerDownLoadOperation.h; sourceTree = "<group>"; };
+		8115EF221D4DEB2D007E1B7B /* FakerDownLoadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakerDownLoadOperation.m; sourceTree = "<group>"; };
+		8115EF241D4DEB4A007E1B7B /* FakerDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakerDownLoadManager.h; sourceTree = "<group>"; };
+		8115EF251D4DEB4A007E1B7B /* FakerDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakerDownLoadManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +92,15 @@
 		8115EEEA1D4DE383007E1B7B /* 模仿SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				8115EF201D4DEAFA007E1B7B /* FakerSDWebImage */,
 				8115EF061D4DE65D007E1B7B /* AFNetworking */,
 				8115EF021D4DE3D0007E1B7B /* CachePath */,
 				8115EEEE1D4DE383007E1B7B /* AppDelegate.h */,
 				8115EEEF1D4DE383007E1B7B /* AppDelegate.m */,
 				8115EEF11D4DE383007E1B7B /* ViewController.h */,
 				8115EEF21D4DE383007E1B7B /* ViewController.m */,
+				8115EF1D1D4DE768007E1B7B /* appTableViewCell.h */,
+				8115EF1E1D4DE768007E1B7B /* appTableViewCell.m */,
 				8115EF1A1D4DE6CE007E1B7B /* appModel.h */,
 				8115EF1B1D4DE6CE007E1B7B /* appModel.m */,
 				8115EEF41D4DE383007E1B7B /* Main.storyboard */,
@@ -135,6 +147,17 @@
 				8115EF131D4DE65D007E1B7B /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		8115EF201D4DEAFA007E1B7B /* FakerSDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				8115EF211D4DEB2D007E1B7B /* FakerDownLoadOperation.h */,
+				8115EF221D4DEB2D007E1B7B /* FakerDownLoadOperation.m */,
+				8115EF241D4DEB4A007E1B7B /* FakerDownLoadManager.h */,
+				8115EF251D4DEB4A007E1B7B /* FakerDownLoadManager.m */,
+			);
+			path = FakerSDWebImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8115EF1C1D4DE6CE007E1B7B /* appModel.m in Sources */,
+				8115EF261D4DEB4A007E1B7B /* FakerDownLoadManager.m in Sources */,
 				8115EF161D4DE65D007E1B7B /* AFSecurityPolicy.m in Sources */,
 				8115EF181D4DE65D007E1B7B /* AFURLResponseSerialization.m in Sources */,
 				8115EEF31D4DE383007E1B7B /* ViewController.m in Sources */,
@@ -216,6 +240,8 @@
 				8115EF191D4DE65D007E1B7B /* AFURLSessionManager.m in Sources */,
 				8115EF051D4DE3D0007E1B7B /* NSString+path.m in Sources */,
 				8115EF151D4DE65D007E1B7B /* AFNetworkReachabilityManager.m in Sources */,
+				8115EF1F1D4DE768007E1B7B /* appTableViewCell.m in Sources */,
+				8115EF231D4DEB2D007E1B7B /* FakerDownLoadOperation.m in Sources */,
 				8115EEED1D4DE383007E1B7B /* main.m in Sources */,
 				8115EF171D4DE65D007E1B7B /* AFURLRequestSerialization.m in Sources */,
 			);
