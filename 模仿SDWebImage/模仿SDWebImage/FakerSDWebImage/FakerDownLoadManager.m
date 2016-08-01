@@ -30,6 +30,7 @@
 
 @end
 @implementation FakerDownLoadManager
+//这里使用单例创建,是因为这个功能需要被使用很多次,用单例创建的话,这样不需要每次都创建一个新的,会节省内存
 +(instancetype)sharedManager
 {
     static FakerDownLoadManager * instance;

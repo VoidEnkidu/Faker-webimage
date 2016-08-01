@@ -12,6 +12,7 @@
 #import "appTableViewCell.h"
 #import "appModel.h"
 #import "FakerDownLoadManager.h"
+#import "UIImageView+WebCache.h"
 
 @interface ViewController ()
 
@@ -113,9 +114,7 @@
     cell.nameLabel.text = info.name;
     cell.downLoadLabel.text = info.download;
     
-    [[FakerDownLoadManager sharedManager] downLoadImageWithUrlString:info.icon compeletion:^(UIImage *image) {
-        cell.iconView.image = image;
-    }];
+    [cell.iconView faker_setImageWithUrlString:info.icon placeholderImage:[UIImage imageNamed:@"user_default"]];
     
   
     return cell;
