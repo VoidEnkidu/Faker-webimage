@@ -21,8 +21,13 @@ const char *kUrlString = "kUrlString";
     }
     //这里self.urlString是用来记录上一个传进来的string的,第一次进来记录好之后可以带入上方的判断,判断成功之后可以调用取消操作,将其取消
     self.urlString = string;
+    //设置占位图
+    self.image = nil;
     [[FakerDownLoadManager sharedManager] downLoadImageWithUrlString:string compeletion:^(UIImage *image) {
+        //这里需要加一个判断,防止图片在第一个位置的时候会老闪(因为他第一个位置是空图片,所以加了张占位图,但是底下这里不加判断的话,会瞬间给它过掉)
+        if (image != nil) {
         self.image =image;
+        }
     }];
 }
 #pragma mark - 分类中写get/set方法的办法
