@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810397C21D4F6531001ABE0D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 810397C11D4F6531001ABE0D /* UIImageView+WebCache.m */; };
 		8115EEED1D4DE383007E1B7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115EEEC1D4DE383007E1B7B /* main.m */; };
 		8115EEF01D4DE383007E1B7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115EEEF1D4DE383007E1B7B /* AppDelegate.m */; };
 		8115EEF31D4DE383007E1B7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115EEF21D4DE383007E1B7B /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		810397C01D4F6531001ABE0D /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		810397C11D4F6531001ABE0D /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		8115EEE81D4DE383007E1B7B /* 模仿SDWebImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "模仿SDWebImage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8115EEEC1D4DE383007E1B7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8115EEEE1D4DE383007E1B7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				8115EF221D4DEB2D007E1B7B /* FakerDownLoadOperation.m */,
 				8115EF241D4DEB4A007E1B7B /* FakerDownLoadManager.h */,
 				8115EF251D4DEB4A007E1B7B /* FakerDownLoadManager.m */,
+				810397C01D4F6531001ABE0D /* UIImageView+WebCache.h */,
+				810397C11D4F6531001ABE0D /* UIImageView+WebCache.m */,
 			);
 			path = FakerSDWebImage;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 			files = (
 				8115EF1C1D4DE6CE007E1B7B /* appModel.m in Sources */,
 				8115EF261D4DEB4A007E1B7B /* FakerDownLoadManager.m in Sources */,
+				810397C21D4F6531001ABE0D /* UIImageView+WebCache.m in Sources */,
 				8115EF161D4DE65D007E1B7B /* AFSecurityPolicy.m in Sources */,
 				8115EF181D4DE65D007E1B7B /* AFURLResponseSerialization.m in Sources */,
 				8115EEF31D4DE383007E1B7B /* ViewController.m in Sources */,
@@ -392,6 +398,7 @@
 				8115EF011D4DE383007E1B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

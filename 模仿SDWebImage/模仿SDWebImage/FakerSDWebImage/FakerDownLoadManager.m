@@ -84,6 +84,11 @@
     __weak typeof(FakerDownLoadOperation *) weakSelf =op;
     //监听图片是否下载完成
     [op setCompletionBlock:^{
+        //判断该操作是否已被取消,如果是的话直接返回,不执行下边的操作
+        if (weakSelf.isCancelled) {
+            NSLog(@"操作已被取消");
+            return ;
+        }
         //取到图片
         UIImage * image = weakSelf.image;
         //回主线程调用block将图片回调回去
@@ -106,7 +111,17 @@
     NSLog(@"创建操作下载图片");
     
 }
-
+#pragma mark - 取消对应的操作
+-(void)cancelOperationWithUrlString:(NSString *)urlString
+{
+    //取到url对应的操作
+    NSOperation * op =[self.operationCache objectForKey:urlString];
+    //判断op是否有值,如果有证明,那么就标记这条urlString为取消状态(但这是个棒槌,所以需要单独去实现一下去),再从操作内存中移除urlString这个Key对应的value
+    if (op) {
+        [op cancel];
+        [self.operationCache removeObjectForKey:urlString];
+    }
+}
 
 #pragma mark - 内存警告
 -(void)memoryWarning

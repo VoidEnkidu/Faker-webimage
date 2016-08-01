@@ -25,6 +25,11 @@
 }
 -(void)main
 {
+    //在下载图片之前先判断这个操作是否被取消了,如果是的话,不用再执行之后的下载操作
+    if (self.isCancelled) {
+        NSLog(@"下载被取消");
+        return;
+    }
     //通过地址字符初始化url
     NSURL * url =[NSURL URLWithString:self.urlString];
     //通过url获取二进制数据
